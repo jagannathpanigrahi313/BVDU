@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/Lenovo/Downloads/SE_Exam_QA_Unit3_4.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Software Engineering – Exam Q&amp;A (Unit III &amp; IV)</title>
+<style>
+:root{
+  --bg:#ffffff; --fg:#1a1a1a; --muted:#5a5a5a; --accent:#166534; --accent2:#b45309;
+  --card:#f3f8f4; --border:#dde8de; --tblhead:#e6f2e8; --qbg:#0f2f1e; --qfg:#ffffff;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101512; --fg:#e9f2ea; --muted:#a9bcae; --accent:#4ade80; --accent2:#fbbf24;
+    --card:#182019; --border:#2a382c; --tblhead:#20291f; --qbg:#16311f; --qfg:#eafff0;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101512; --fg:#e9f2ea; --muted:#a9bcae; --accent:#4ade80; --accent2:#fbbf24;
+  --card:#182019; --border:#2a382c; --tblhead:#20291f; --qbg:#16311f; --qfg:#eafff0;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box;}
+body{background:var(--bg); color:var(--fg); margin:0; padding:0 0 3rem; font-family:"Georgia","Charter",serif; line-height:1.6;}
+.wrap{max-width:860px; margin:0 auto; padding:2rem 1.25rem;}
+header.title{border-bottom:3px solid var(--accent); padding-bottom:1rem; margin-bottom:2rem;}
+header.title h1{font-size:1.6rem; margin:0 0 .3rem; font-family:"Helvetica Neue",Arial,sans-serif;}
+header.title p{margin:0; color:var(--muted); font-family:"Helvetica Neue",Arial,sans-serif; font-size:.95rem;}
+.toc{background:var(--card); border:1px solid var(--border); border-radius:8px; padding:1rem 1.3rem; margin-bottom:2rem; font-family:"Helvetica Neue",Arial,sans-serif; font-size:.9rem;}
+.toc h2{margin-top:0; font-size:1rem; color:var(--accent); border:none;}
+.toc ol{margin:.3rem 0; padding-left:1.3rem;}
+.toc li{margin:.15rem 0;}
+.qblock{margin-top:2.6rem; padding-top:.2rem; page-break-before:always;}
+.qblock:first-of-type{page-break-before:auto;}
+.qhead{
+  background:var(--qbg); color:var(--qfg); font-family:"Helvetica Neue",Arial,sans-serif;
+  padding:.7rem 1rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;
+  gap:1rem; margin-bottom:1rem;
+}
+.qhead h2{margin:0; font-size:1.05rem; color:var(--qfg); border:none; padding:0;}
+.marks{
+  background:var(--accent2); color:#1a1a1a; font-size:.75rem; font-weight:bold;
+  padding:.25rem .6rem; border-radius:10px; white-space:nowrap;
+}
+h3{font-family:"Helvetica Neue",Arial,sans-serif; font-size:1rem; color:var(--accent); margin-top:1.3rem; margin-bottom:.3rem;}
+p{margin:.5rem 0;}
+ul,ol{margin:.4rem 0; padding-left:1.4rem;}
+li{margin:.2rem 0;}
+.def{background:var(--card); border-left:4px solid var(--accent); padding:.6rem .9rem; margin:.6rem 0; border-radius:4px; font-style:italic;}
+table{border-collapse:collapse; width:100%; margin:.7rem 0; font-family:"Helvetica Neue",Arial,sans-serif; font-size:.87rem;}
+th,td{border:1px solid var(--border); padding:.45rem .55rem; text-align:left; vertical-align:top;}
+th{background:var(--tblhead);}
+.tablewrap{overflow-x:auto;}
+.diagram{background:var(--card); border:1px dashed var(--border); border-radius:6px; padding:.7rem .9rem; font-family:"Courier New",monospace; font-size:.8rem; white-space:pre; overflow-x:auto; margin:.6rem 0; color:var(--fg);}
+.example{background:var(--card); border-radius:6px; padding:.6rem .9rem; margin:.5rem 0;}
+.example b{color:var(--accent2);}
+.conclusion{border-top:1px solid var(--border); margin-top:.8rem; padding-top:.5rem; font-size:.93rem; color:var(--muted);}
+.gantt-cell{background:var(--accent); color:transparent;}
+footer{margin-top:3rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-family:"Helvetica Neue",Arial,sans-serif; font-size:.85rem;}
+@media print{.qblock{page-break-before:always;} .qblock:first-of-type{page-break-before:avoid;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="title">
+  <h1>Software Engineering – Exam Question &amp; Answer Set</h1>
+  <p>Unit III (Software Project Management) &amp; Unit IV (Design &amp; UML) · 10 Marks Each</p>
+</header>
+
+<div class="toc">
+  <h2>Questions Covered</h2>
+  <ol>
+    <li>Define Software Project Management. Why is it essential?</li>
+    <li>Factors influencing selection of project approach; comparison of approaches.</li>
+    <li>Class diagram of Library Management System with OOD concepts.</li>
+    <li>Design Concepts: Abstraction, Modularity, Refinement, Refactoring, Pattern.</li>
+    <li>Types of Risk and the Risk Management Process.</li>
+    <li>Functional Independence; Cohesion vs Coupling.</li>
+    <li>Project Planning and Scheduling; Gantt Chart example.</li>
+    <li>Project Organization and Team Structures (two structures in detail).</li>
+    <li>Interface Design and Component-Level Design with examples.</li>
+    <li>Deployment-Level Design and Architectural Design Model with examples.</li>
+  </ol>
+</div>
+
+<!-- Q1 -->
+<div class="qblock">
+<div class="qhead"><h2>Q1. Define Software Project Management. Why is it essential for successful software development?</h2><span class="marks">10 Marks</span></div>
+
+<div class="def">Software Project Management (SPM) is the process of planning, organizing, monitoring, and controlling a software project so that it is completed within the planned time, within the planned budget, with the required quality, and according to the customer's requirements.</div>
+<p>Software development involves many interlinked activities — requirement analysis, design, coding, testing, and maintenance — that must be properly coordinated. SPM manages all activities and resources required to develop software successfully, keeping four key aspects in balance: <b>Time + Cost + Scope + Quality</b>.</p>
+<p>software project management means managing all the activities and resources required to develop software successfully.</p><h3>Why SPM is Essential for successful software development:</h3>
+<ol>
+<li>Completes the project on time</li>
+<li>Controls project cost within budget</li>
+<li>Manages resources (people, hardware, software) effectively</li>
+<li>Maintains required software quality</li>
+<li>Identifies and manages risks before they cause failure</li>
+<li>Coordinates team members and their responsibilities</li>
+<li>Tracks project progress against the plan</li>
+<li>Ensures customer requirements are satisfied</li>
+</ol>
+<div class="example"><b>Example:</b> For a Student Attendance Management System, the project manager decides required features, estimates time/cost, assigns developers and testers, prepares a schedule, identifies risks, and monitors progress to ensure timely, correct delivery.</div>
+<p class="conclusion"><b>Conclusion:</b> SPM is essential because software projects are complex and resource-intensive; without systematic planning and control, projects commonly fail to meet deadlines, budgets, or quality expectations.</p>
+</div>
+
+<!-- Q2 -->
+<div class="qblock">
+<div class="qhead"><h2>Q2. Explain the factors that influence the selection of project approach. Compare different project management approaches.</h2><span class="marks">10 Marks</span></div>
+
+<div class="def">A project approach is the method / process model selected to develop a software system. <br> It defines how development activities will be planned, performed, and managed from start to completion.</div>
+<h3>Factors Influencing the Selection of a Project Approach are:</h3>
+<ol>
+<li><b>Requirements</b> – <br> If requirements are clear and stable, Waterfall may be suitable. <br> If requirements are likely to change frequently, Agile may be better.
+</li>
+<li><b>Project Size</b> – <br> Small projects may use simple and flexible approaches <br> Large and complex projects may require more structured approaches.
+</li>
+<li><b>Project Complexity</b> – Highly complex projects need continuous risk analysis and evaluation.</li>
+<li><b>Risk</b> – If the project has High technical/business risk then it favors a risk-driven approach like Spiral.</li>
+<li><b>Customer Involvement</b> – If Regular customer feedback is required then Agile or Prototyping can be useful.</li>
+<li><b>Time Available</b> – If software needs to be delivered in small releases, an Incremental or Agile approach may
+be suitable.</li>
+<li><b>Team Experience</b> – Skill and experience level of the team affects feasibility.</li>
+<li><b>Technology</b> – If new or unfamiliar technology is being used, an approach that allows experimentation and prototyping may be preferred.</li>
+</ol>
+<h3>Comparison of Approaches</h3>
+<div class="tablewrap"><table>
+<tbody><tr><th>Approach</th><th>Suitable When</th><th>Key Trait</th></tr>
+<tr><td>Waterfall</td><td>Requirements clear and stable</td><td>Sequential, rigid phases</td></tr>
+<tr><td>Incremental</td><td>Software can be delivered in parts</td><td>Delivered in functional increments</td></tr>
+<tr><td>Prototyping</td><td>Requirements unclear</td><td>Builds a working model to refine requirements</td></tr>
+<tr><td>Spiral</td><td>Project has significant risk</td><td>Risk analysis in every cycle</td></tr>
+<tr><td>Agile</td><td>Requirements change frequently, feedback important</td><td>Iterative, flexible, customer-collaborative</td></tr>
+</tbody></table></div>
+<div class="example"><b>Example:</b> For a Student Management System — fixed requirements → Waterfall; features added/modified regularly based on feedback → Agile.</div>
+<p class="conclusion"><b>Conclusion:</b> Selecting a project approach means choosing the most suitable development model based on requirements, size, complexity, risk, time, resources, and customer involvement — no single approach fits every project.</p>
+</div>
+
+<!-- Q3 -->
+<div class="qblock">
+<div class="qhead"><h2>Q3. Design a class diagram of Library Management System and explain how the relevant Object-Oriented Design Concepts are represented.</h2><span class="marks">10 Marks</span></div>
+
+<p> A class diagram is a structural UML diagram that models the classes of a system, their attributes, operations, and the relationships (association, aggregation, composition, generalization) among them. 
+  <br> Below is the complete class diagram for a Library Management System, consisting of six classes — Librarian, User, Book, Category, IssueRecord, and Member.</p>
+
+<img src="lms.png" alt="Class Diagram of Library Management System" style="max-width:100%; border:1px solid var(--border); border-radius:6px; margin:.6rem 0;">
+
+<a href="https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/">OOP-GFG</a>
+
+<h3>Key Attributes / Methods</h3>
+<ul>
+<li><b>Librarian</b>: employeeId, name, phone | addBook(), removeBook(), manageMembers()</li>
+<li><b>User</b>: userId, name, email, password | login(), logout(), updateProfile()</li>
+<li><b>Book</b>: bookId, title, author, category, status | isAvailable(), markIssued(), markReturned()</li>
+<li><b>Category</b>: categoryId, name, description | addCategory(), updateCategory(), deleteCategory()</li>
+<li><b>IssueRecord</b>: issueId, memberId, bookId, issueDate, dueDate, returnDate | calculateFine(), markReturned()</li>
+<li><b>Member</b>: memberId, name, email, phone, address, joinDate, type | borrowBook(), returnBook(), viewIssuedBooks(), payFine()</li>
+</ul>
+
+<h3>Relationships in the Diagram</h3>
+<ol>
+<li><b>Librarian — Book</b> (1 to 0..*): a plain <i>association</i> labelled "manages" — one Librarian manages many Books.</li>
+<li><b>Book — Category</b> (0..* to 1): an <i>aggregation</i> ("belongs to") — a Category can exist independently of any specific Book, so this is a weak has-a relationship.</li>
+<li><b>User — Librarian</b>: a <i>generalization</i> (inheritance) — User is a specialization/subtype that inherits from Librarian.</li>
+<li><b>Book — IssueRecord</b> (1 to 0..*): a <i>composition</i> ("generates") — an IssueRecord is strongly owned by the transaction on a Book; if the parent record is removed, the IssueRecord has no independent existence.</li>
+<li><b>IssueRecord — Member</b> (0..* to 1): a plain <i>association</i> ("issues") — many IssueRecords are linked to one Member.</li>
+</ol>
+
+<h3>Representation of OOD Concepts</h3>
+<div class="tablewrap"><table>
+<tbody><tr><th>OOD Concept</th><th>Representation in Diagram</th></tr>
+<tr><td>Class</td><td>Each of the six boxes (Librarian, User, Book, Category, IssueRecord, Member) is a class, shown as three compartments: name, attributes, and operations</td></tr>
+<tr><td>Object</td><td>A specific instance of a class at run-time, e.g., a Book object with bookId = "B101", title = "Data Structures"</td></tr>
+<tr><td>Encapsulation</td><td>Attributes (e.g., password, status, dueDate) are private (-), accessible to the outside only through public methods (+) like login(), markIssued(), calculateFine()</td></tr>
+<tr><td>Inheritance (Generalization)</td><td>User ▷ Librarian — shown with a hollow triangle arrow — User inherits common properties/behavior from Librarian</td></tr>
+<tr><td>Association</td><td>Plain lines: Librarian "manages" Book, and IssueRecord "issues" to Member — a general link between two independent classes</td></tr>
+<tr><td>Aggregation</td><td>Book ◇ Category — open diamond — a weak "has-a": a Category is not destroyed if a Book is deleted</td></tr>
+<tr><td>Composition</td><td>Book ● IssueRecord ("generates") — filled diamond — a strong "has-a": the IssueRecord's existence is tied to the Book transaction that generated it</td></tr>
+<tr><td>Multiplicity</td><td>Numbers like 1, 0..* at each end of a relationship specify how many objects of one class relate to objects of the other</td></tr>
+</tbody></table></div>
+<p class="conclusion"><b>Conclusion:</b> The class diagram models the complete static structure of the Library Management System — its classes, attributes, operations, and relationships. Association, Aggregation, Composition, and Generalization together capture how objects of these classes relate to and depend on one another, while Encapsulation ensures each class's internal data is protected and accessed only through defined methods.</p>
+</div>
+
+<!-- Q4 -->
+<div class="qblock">
+<div class="qhead"><h2>Q4. Define and explain the following Design Concepts: Abstraction, Modularity, Refinement, Refactoring, Pattern.</h2><span class="marks">10 Marks</span></div>
+
+<h3>i. Abstraction</h3>
+<div class="def">The process of identifying the essential features of a system while hiding unnecessary implementation details.</div>
+<p>Types: Data Abstraction (hides how data is stored), Procedural Abstraction (hides internal steps of a function), Control Abstraction (hides complex control logic behind simple instructions).</p>
+<div class="example"><b>Example:</b> An ATM user sees only Withdraw/Deposit/Balance options; the internal banking process is hidden.</div>
+
+<h3>ii. Modularity</h3>
+<div class="def">The process of dividing a software system into small, independent modules, each responsible for a specific task.</div>
+<p>Types: Functional Modularity (e.g., Login Module, Payment Module) and Object-Oriented Modularity (e.g., Student class, Product class).</p>
+<div class="example"><b>Example:</b> A Library Management System divided into Book Management, Student Management, Issue/Return, and Fine Calculation modules.</div>
+
+<h3>iii. Refinement</h3>
+<div class="def">Breaking a large, complex problem into smaller, simpler, and manageable parts (Stepwise Refinement).</div>
+<p>Types: Top-Down Refinement (main system divided progressively) and Stepwise Refinement (details added step by step).</p>
+<div class="example"><b>Example:</b> Library System → Book Management → Issue Book → Update Database.</div>
+
+<h3>iv. Refactoring</h3>
+<div class="def">Restructuring existing code to improve readability, maintainability, and quality without changing its external functionality.</div>
+<p>Techniques: Rename Method (e.g., calc() → calculateTotal()), Extract Method (splitting a long function), Remove Duplicate Code.</p>
+
+<h3>v. Pattern (Design Pattern)</h3>
+<div class="def">A proven, reusable solution to a recurring software design problem.</div>
+<ul>
+<li><b>Creational</b> – Singleton, Factory Method, Abstract Factory, Builder, Prototype</li>
+<li><b>Structural</b> – Adapter, Decorator, Facade, Composite, Proxy</li>
+<li><b>Behavioral</b> – Observer, Strategy, Command, State, Iterator</li>
+</ul>
+<div class="example"><b>Example:</b> Singleton Pattern ensures only one object of a class exists (e.g., a Database Connection Manager).</div>
+<p class="conclusion"><b>Conclusion:</b> Abstraction, Modularity, Refinement, Refactoring, and Patterns together help produce software that is simple, reusable, maintainable, and of high quality.</p>
+</div>
+
+<!-- Q5 -->
+<div class="qblock">
+<div class="qhead"><h2>Q5. Explain the various types of Risk and the Risk Management Process.</h2><span class="marks">10 Marks</span></div>
+
+<div class="def">A risk is a possible problem or uncertain event that may negatively affect a software project in future.</div>
+<div class="def">Risk Management is the systematic process of identifying, analyzing, planning, and controlling risks throughout the project to reduce their possibility and impact on a software project.</div>
+<h3>The various types of Risks are as follows :</h3>
+<div class="tablewrap"><table>
+<tbody><tr><th>Type</th><th>Description</th><th>Examples</th></tr>
+<tr><td>Project Risks</td><td>These risks affect the project schedule, resources, or cost.</td><td>Lack of skilled developers, incorrect cost estimation, Delay in project activities, Team member leaving the project</td></tr>
+<tr><td>Technical Risks</td><td>These risks are related to technology, design, or implementation.</td><td>New technology fails, Performance problems, Integration problems, Difficulties in implementing a feature</td></tr>
+<tr><td>Business Risks</td><td>These risks affect the business or organization.</td><td>Change in business requirements, loss of funding, Product may not meet market needs, customer cancels project</td></tr>
+</tbody></table></div>
+<h3>Risk Management Process</h3>
+<div class="diagram">Risk Identification → Risk Analysis → Risk Planning
+        → Risk Monitoring → Risk Control</div>
+<ol>
+
+<img src="risk.png" alt="Risk Management Process" style="max-width:100%; border:1px solid var(--border); border-radius:6px; margin:.6rem 0;">
+<!-- 
+<li><b>Risk Identification</b> – Identify all possible risks that may affect the project. 
+  <br> e.g. A project depends on a particular third-party software service.</li>
+<li><b>Risk Analysis</b> – Analyze Probability (likelihood) and Impact (severity)</li>
+<li><b>Risk Planning</b> – Prepare actions to handle identified risks</li>
+<li><b>Risk Monitoring</b> – Regularly track whether probability/impact has changed</li>
+<li><b>Risk Control</b> – Take corrective action when a risk occurs</li>
+</ol>2
+<h3>Risk Response Strategies</h3>
+<p><b>Avoidance</b> (change plan to eliminate risk), <b>Reduction/Mitigation</b> (reduce probability/impact), <b>Transfer</b> (shift responsibility to another party), <b>Acceptance</b> (accept when impact is small).</p> -->
+<div class="example"><b>Example:</b>Suppose a project depends on a single developer who has specialized technical knowledge.
+<br> Risk: The developer may leave the project.
+<br> Impact: Project may be delayed.
+<br> Risk response: Train another team member and maintain proper documentation.
+<br> Thus, the project can continue even if the original developer leaves.</div>
+</div>
+
+<!-- Q6 -->
+<div class="qblock">
+<div class="qhead"><h2>Q6. Describe the concept of Functional Independence and differentiate between Cohesion and Coupling.</h2><span class="marks">10 Marks</span></div>
+
+<div class="def">Functional Independence means each module performs one specific task with minimum dependency on other modules. It is achieved through High Cohesion and Low Coupling.</div>
+<p style="text-align:center;font-weight:bold;">Functional Independence = High Cohesion + Low Coupling</p>
+
+<h3>Components</h3>
+
+<h3>1. High Cohesion</h3>
+<p>High cohesion means all functions within a module are closely related and work together to perform a single task.</p>
+<div class="example"><b>Example:</b> A Login Module that handles only user authentication.</div>
+
+<h3>2. Low Coupling</h3>
+<p>Low coupling means modules have minimum dependency on each other, so changes in one module have little effect on others.</p>
+<div class="example"><b>Example:</b> A Payment Module that works independently of the Student Module.</div>
+
+<div class="example"><b>Example:</b> In an Online Shopping System:
+<br> Login Module → User authentication
+<br> Product Module → Product management
+<br> Payment Module → Payment processing
+<br> Each module performs its own task with minimum dependency on other modules.</div>
+
+
+<h3>Types of Cohesion (weakest to strongest)</h3>
+<ol>
+<li><b>Coincidental</b> – unrelated tasks grouped in one module (weakest)</li>
+<li><b>Logical</b> – similar-category tasks grouped together but executed differently</li>
+<li><b>Temporal</b> – tasks grouped because they execute at the same time (e.g., initialization module)</li>
+<li><b>Procedural</b> – tasks grouped because they follow a certain sequence of execution</li>
+<li><b>Communicational</b> – tasks grouped because they operate on the same data</li>
+<li><b>Sequential</b> – output of one task is the input of the next</li>
+<li><b>Functional</b> – all tasks contribute to a single, well-defined task (strongest, most desirable)</li>
+</ol>
+<h3>Types of Coupling (loosest to tightest)</h3>
+<ol>
+<li><b>Data Coupling</b> – modules share data only via parameters (loosest, most desirable)</li>
+<li><b>Stamp Coupling</b> – modules share a composite data structure but use only part of it</li>
+<li><b>Control Coupling</b> – one module controls the logic/flow of another by passing control flags</li>
+<li><b>Common Coupling</b> – modules share global data</li>
+<li><b>Content Coupling</b> – one module directly modifies/relies on the internal workings of another (tightest, least desirable)</li>
+</ol>
+<h3>Cohesion vs Coupling  (Include the above types in this distinguish)</h3>
+<img src="Cohvscoup.png" alt="Cohesion vs Coupling" style="max-width:100%; border:1px solid var(--border); border-radius:6px; margin:.6rem 0;">
+
+<div class="tablewrap"><table>
+<!-- <tbody><tr><th>Cohesion</th><th>Coupling</th></tr>
+<tr><td>Degree to which elements within a module are related</td><td>Degree of dependency between different modules</td></tr>
+<tr><td>High cohesion is desirable</td><td>Low coupling is desirable</td></tr>
+<tr><td>Measures module strength/focus</td><td>Measures module interdependency</td></tr>
+<tr><td>Internal property of a single module</td><td>External property between two or more modules</td></tr> -->
+<tr><td>Example: Login module handling only authentication</td><td>Example: Payment module functioning independently of Student module</td></tr>
+</tbody></table></div>
+
+<h3>Advantages of Functional Independence</h3>
+<ul><li>Easy to understand, test, and debug</li><li>Simplifies maintenance</li><li>Improves code reusability</li><li>Changes in one module minimally affect others</li></ul>
+<p class="conclusion"><b>Conclusion:</b> A well-designed system aims for high cohesion within modules and low coupling between modules, achieving functional independence and easier maintainability.</p>
+</div>
+
+<!-- Q7 -->
+<div class="qblock">
+<div class="qhead"><h2>Q7. Describe the process of Project Planning and Scheduling. Draw a Gantt Chart for any one suitable example.</h2><span class="marks">10 Marks</span></div>
+
+<div class="tablewrap"><table>
+<tbody><tr><th>Project Planning</th><th>Project Scheduling</th></tr>
+<tr><td><div class="def"><b>Project Planning:</b> <br> Project Planning is the process of deciding what work has to be done, how it will be done, who will do it, and what resources are required  to complete a software project
+successfully. <br> - Project planning is preparing a roadmap for completing the software project. <br> - Project Planning defines the work, resources, cost, and approach required for a project. </td><td><div class="def"><b>Project Scheduling:</b> <br> Project Scheduling is the process of deciding when each project activity will start and finish. <br> - Scheduling tells us when each task should be performed and how long it should take. <br> -  Project Scheduling determines the sequence and timing of project activities. </td></tr>
+
+<tr><td><h3>Objectives of Project Planning: </h3>
+<ol>
+  <p>Project planning helps to:</p>
+  <li>Define the project scope and objectives.</li>
+  <li>Identify the activities and tasks.</li>
+  <li>Estimate time, cost, and effort.</li>
+  <li>Identify required resources.</li>
+  <li>Assign responsibilities to team members.</li>
+  <li>Identify possible risks.</li>
+  <li>Establish a proper schedule</li>
+  <li>Provide a basis for monitoring and controlling the project.</li>
+</ol>
+</td><td><h3>Objectives of Project Scheduling: </h3>
+<ol>
+  <p>Project scheduling helps to:</p>
+  <li>Complete the project on time.</li>
+  <li>Define start and finish dates.</li>
+  <li>Allocate resources effectively</li>
+  <li>Identify dependencies between tasks.</li>
+  <li>Monitor project progress.</li>
+  <li>Avoid unnecessary delays.</li>
+</ol>
+</td></tr>
+
+<tr><td><h3>Steps in Project Planning: </h3>
+<ol>
+  <li><b>Define Project Scope</b> <br> <p>Identify what the project will and will not include.</p> </li>
+
+  <li><b>Identify tasks.</b> <br> 
+    <p>Break the project into smaller activities such as:
+      <ul>
+        <li>Requirement analysis</li>
+        <li>Design</li>
+        <li>Coding</li>
+        <li>Testing</li>
+        <li>Deployment</li>
+      </ul>
+    </p> </li>
+
+  <li><b>Estimate Resources</b> <br> 
+    <p>Determine the required:
+      <ul>
+        <li>People</li>
+        <li>Hardware</li>
+        <li>Software</li> 
+        <li>Budget</li>
+      </ul>
+    </p> </li>
+    
+    <li><b>Estimate Time and Cost</b> <p>Estimate how much time and money are required for each activity.</p> </li>
+  <li><b>Assign responsibilities</b> <p>Assign specific tasks to a appropriate team member.</p> </li>
+  <li><b>Identify possible risks.</b><p>Identify possible problems that may affect the project.</p></li>
+</ol>
+
+
+</td><td><h3>Steps in Project Scheduling: </h3>
+<ol>
+  <li><b>Identify Activities</b> <br> <p>List all activities required to complete the project.</p> </li>
+
+  <li><b>Determine Activity Sequence</b> <br> 
+    <p>Decide which activities must be completed before others.
+      <!-- <ul>
+        <li>Requirement analysis</li>
+        <li>Design</li>
+        <li>Coding</li>
+        <li>Testing</li>
+        <li>Deployment</li>
+      </ul> -->
+    </p> </li>
+
+  <li><b>Estimate Duration</b> <br> 
+    <p>Determine the time required for each activity.
+      <!-- <ul>
+        <li>People</li>
+        <li>Hardware</li>
+        <li>Software</li> 
+        <li>Budget</li>
+      </ul> -->
+    </p> </li>
+    
+    <li><b> Assign Resources</b> <p>Assign team members and other resources to activities.</p> </li>
+  <li><b>Prepare the Schedule</b> <p>Set the start and completion dates.</p> </li>
+  <li><b>Monitor the Schedule</b><p>Compare actual progress with the planned schedule and take corrective action when required.</p></li>
+</ol>
+</td></tr>
+
+</tbody></table></div>
+
+
+<h3>Planning vs Scheduling</h3>
+<div class="tablewrap"><table>
+<tbody><tr><th>Project Planning</th><th>Project Scheduling</th></tr>
+<tr><td>Decides <i>what</i> needs to be done</td><td>Decides <i>when</i> it will be done</td></tr>
+<tr><td>Defines activities, resources, cost</td><td>Defines start/finish dates</td></tr>
+<tr><td>Broader activity</td><td>Part of project planning</td></tr>
+</tbody></table></div>
+<h3>Gantt Chart Example — Library Management System (10-week project)</h3>
+<div class="tablewrap"><table>
+<tbody><tr><th>Activity</th><th>Duration</th><th>Wk1</th><th>Wk2</th><th>Wk3</th><th>Wk4</th><th>Wk5</th><th>Wk6</th><th>Wk7</th><th>Wk8</th><th>Wk9</th><th>Wk10</th></tr>
+<tr><td>Requirement Analysis</td><td>1 wk</td><td class="gantt-cell">█</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>System Design</td><td>2 wk</td><td></td><td class="gantt-cell">█</td><td class="gantt-cell">█</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Coding</td><td>4 wk</td><td></td><td></td><td></td><td class="gantt-cell">█</td><td class="gantt-cell">█</td><td class="gantt-cell">█</td><td class="gantt-cell">█</td><td></td><td></td><td></td></tr>
+<tr><td>Testing</td><td>2 wk</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="gantt-cell">█</td><td class="gantt-cell">█</td><td></td></tr>
+<tr><td>Deployment</td><td>1 wk</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="gantt-cell">█</td></tr>
+</tbody></table></div>
+<h3>Advantages of a Gantt Chart</h3>
+<ul><li>Gives a clear visual overview of the whole project timeline</li><li>Shows which activities overlap and which run in sequence</li><li>Makes it easy to track actual progress against the planned schedule</li><li>Helps identify delays early so corrective action can be taken</li></ul>
+<p class="conclusion"><b>Conclusion:</b> Project Planning defines what work, resources, and approach are needed, while Scheduling determines the sequence and timing of activities. A Gantt Chart visually represents this schedule, helping the manager track progress and dependencies.</p>
+</div>
+
+<!-- Q8 -->
+<div class="qblock">
+<div class="qhead"><h2>Q8. Explain the different Project Organization and Team Structures. Describe any two structures with advantages, disadvantages, and diagrams.</h2><span class="marks">10 Marks</span></div>
+
+<div class="def">Project organization is the process of arranging the people, roles, responsibilities, and communication needed to complete a Software project. <br> 
+  Project organization defines the roles, responsibilities, and relationships among project members. <br>
+  Project organization defines who will do what work and who will be responsible for the
+project. <br>
+A good project organization helps the team work together effectively and complete the
+project successfully.
+</div>
+<br>
+
+<div class="def">A team structure defines how team members are organized and how they communicate with each other and make decisions.</div>
+<p>The commonly used types of Structures are: Controlled Centralized, Controlled Decentralized, Democratic Decentralized.</p>
+
+<h3>1. Controlled Centralized Structure</h3>
+<div class="diagram">              Project Manager
+              /      |      \
+       Developer   Tester   Designer</div>
+
+<p>
+  In this structure, one person or a small group controls most decisions.
+  <ul>
+    <li>Project manager has major responsibility.</li>
+    <li>Communication mainly follows a central authority</li>
+    <li>Suitable when quick decisions are required.</li>
+  </ul>
+</p>
+<p><b>Advantages:</b> Quick decision-making; clear authority; suitable for small/simple projects.<br><b>Disadvantages:</b> Overloads the manager; less team creativity; poor for complex, experienced teams.</p>
+
+<h3>2. Democratic Decentralized Structure</h3>
+<div class="diagram">        Developer  ↔  Tester
+            ↕            ↕
+        Designer  ↔  Analyst</div>
+
+<p>
+  In this structure, decisions are made collectively by team members.
+  <ul>
+    <li>There is no strong central authority.</li>
+    <li>Team members communicate directly with each other.</li>
+    <li>Suitable for experienced teams and complex problem-solving.</li>
+  </ul>
+</p>
+
+<p><b>Advantages:</b> Encourages creativity and collaboration; suitable for experienced teams and complex problem-solving.<br><b>Disadvantages:</b> Slower decision-making; may lead to conflicts without clear authority.</p>
+
+<h3>3. Controlled Decentralized Structure (hybrid)</h3>
+<div class="diagram">              Project Manager
+              /      |      \
+       Developer   Tester   Designer
+          ↕            ↕        ↕
+        Team members also communicate among themselves</div>
+    
+<p>
+In this structure, the project manager provides overall direction, but team members also
+participate in decision-making.
+  <ul>
+    <li>Some decisions are centralized.</li>
+    <li>Team members have more responsibility.</li>
+    <li>Communication is more flexible.</li>
+  </ul>
+</p>
+<p><b>Advantages:</b> Balances fast decision-making with team input; more flexible communication than pure centralized structure.<br><b>Disadvantages:</b> Can create confusion over which decisions are centralized vs. shared if roles aren't clearly defined.</p>
+
+<h3>Comparison of Team Structures</h3>
+<div class="tablewrap"><table>
+<tbody><tr><th>Structure</th><th>Decision-Making</th><th>Best Suited For</th></tr>
+<tr><td>Controlled Centralized</td><td>One person (PM) controls most decisions</td><td>Small, simple projects needing quick decisions</td></tr>
+<tr><td>Controlled Decentralized</td><td>PM gives direction; team shares some decisions</td><td>Medium-sized projects needing a balance of control and flexibility</td></tr>
+<tr><td>Democratic Decentralized</td><td>Decisions made collectively; no central authority</td><td>Complex projects with experienced, senior teams</td></tr>
+</tbody></table></div>
+<h3>Factors Affecting Team Structure</h3>
+<p>
+The choice of team structure depends on:
+<ul>
+  <li>Project complexity</li>
+  <li>Project size</li>
+  <li>Team members' experience</li>
+  <li>Team size</li>
+  <li>Type of project</li>
+  <li>Communication requirements</li>
+  <li>Project deadlines</li>
+</ul>
+
+<h3>Importance of Proper Team Structure</h3>
+<p>
+A suitable team structure helps to:
+<ul>
+  <li>Improve communication</li>
+  <li>Reduce conflicts</li>
+  <li>Clearly define responsibilities</li>
+  <li>Improve productivity</li>
+  <li>Make decision-making easier</li>
+  <li>Complete the project efficiently</li>
+</ul>
+
+<p class="conclusion"><b>Conclusion:</b> The choice of team structure depends on project complexity and team experience — centralized structures suit small/simple projects requiring fast decisions, while decentralized structures suit complex projects with experienced, collaborative teams.</p>
+</div>
+
+<!-- Q9 -->
+<div class="qblock">
+<div class="qhead"><h2>Q9. Explain Interface Design and Component-Level Design with suitable examples.</h2><span class="marks">10 Marks</span></div>
+
+<h3>Interface Design</h3>
+<div class="def">The process of designing the interaction between the user and the software system so that it is easy, efficient, and user-friendly.</div>
+<p><b>Principles:</b> Simplicity, Consistency, User-Friendliness, Feedback (e.g., "Login Successful"), Error Handling.</p>
+<p><b>Components:</b> Input Interface (accepts data, e.g., Login Form), Output Interface (displays information, e.g., Report/Receipt), Navigation Interface (helps move between screens, e.g., Menu/Back Button).</p>
+<div class="example"><b>Example (Online Shopping Website):</b> Input – Login page/Search box; Output – Product details/Order confirmation; Navigation – Home, Cart, Payment, Profile.</div>
+
+<h3>Component-Level Design</h3>
+<div class="def">The detailed design of individual software components, including their functions, logic, inputs, outputs, and interactions.</div>
+<p><b>Main elements:</b> Component/Module, Interface, Input, Processing/Logic, Output.</p>
+<div class="diagram">        Component
+            │
+   ┌────────┼────────┐
+ Input  →  Logic  →  Output</div>
+<div class="example"><b>Example (Login Component):</b> Input – Username + Password → Logic – Verify Details → Output – Login Success / Error.</div>
+<p class="conclusion"><b>Conclusion:</b> Interface Design focuses on the interaction between the user and the system, while Component-Level Design focuses on the internal working of individual modules — together they ensure the software is both usable and correctly functioning internally.</p>
+</div>
+
+<!-- Q10 -->
+<div class="qblock">
+<div class="qhead"><h2>Q10. Explain Deployment-Level Design and Architectural Design Model with suitable examples.</h2><span class="marks">10 Marks</span></div>
+
+<h3>Architectural Design Model</h3>
+<div class="def">The Architecture Design Model (high-level design) describes the overall structure of a system by dividing it into modules and specifying their relationships and interactions.</div>
+<p><b>Components:</b> Modules, Connectors, Interfaces, Data Flow.<br><b>Types:</b> Layered Architecture, Client-Server, MVC, Microservices.</p>
+<div class="diagram">                SOFTWARE SYSTEM
+                       │
+        ┌──────────────┼──────────────┐
+        ▼              ▼              ▼
+   Login Module   Product Module  Payment Module
+        └──────────────┼──────────────┘
+                        ▼
+                 Database Module</div>
+<div class="example"><b>Example (Online Shopping System):</b> Login manages users, Order manages orders, Payment handles transactions, Database stores information.</div>
+
+<h3>Deployment-Level Design</h3>
+<div class="def">Defines the physical arrangement of software components on hardware devices or servers — where and how the software will be installed and run.</div>
+<p><b>Main elements:</b> Hardware, Software Components, Network, Server, Client.</p>
+<div class="diagram">   User/Client → Application Server → Database Server</div>
+<div class="example"><b>Example (Online Shopping System):</b> User → Mobile/Computer; Application → Web/Application Server; Data → Database Server.</div>
+<h3>Advantages of Deployment-Level Design</h3>
+<ul><li>Shows exactly where each software component will run</li><li>Helps in planning installation and system setup</li><li>Improves performance and capacity planning</li><li>Helps manage network communication between components</li><li>Makes future system maintenance easier</li></ul>
+<p class="conclusion"><b>Conclusion:</b> The Architectural Design Model defines the logical structure and interaction of software modules, while Deployment-Level Design defines the physical placement and execution of those modules on hardware — both are essential to move from design to a working, running system.</p>
+</div>
+
+<footer>Software Engineering — Exam Q&amp;A Set (Unit III &amp; IV). Compiled for exam revision — 10 marks each question.</footer>
+</div>
+
+
+</body></html>
